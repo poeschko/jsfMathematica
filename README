@@ -1,0 +1,6 @@
+Setup:
+- set kernelLinkArgs in Query.java according to your system
+  (see http://reference.wolfram.com/mathematica/JLink/tutorial/WritingJavaProgramsThatUseMathematica.html)
+- copy your JLink.jar to WebContent/WEB-INF/lib
+- install Tomcat (>= 6), JavaServer Faces (>= 2)
+- run the server

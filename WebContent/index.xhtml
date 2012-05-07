@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:f="http://java.sun.com/jsf/core"
+		xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>JSF-Mathematica</title>
+</head>
+<h:body>
+		<f:view>
+				<h:form>
+						<h:panelGrid columns="2">
+								<h:outputLabel value="Query" />
+								<h:inputText value="#{query.query}" />
+						</h:panelGrid>
+						<h:commandButton
+								action="#{query.execute}"
+								value="Execute" />
+						<h:messages layout="table" />
+				</h:form>
+
+
+				<h:panelGroup rendered="#{query.executed}">
+						<h3>Result</h3>
+						<!--<h:outputLabel value="Result" />-->
+						<h:outputLabel value="#{query.result}" />
+				</h:panelGroup>
+		</f:view>
+</h:body>
+</html>
