@@ -2,5 +2,8 @@ Setup:
 - set kernelLinkArgs in Query.java according to your system
   (see http://reference.wolfram.com/mathematica/JLink/tutorial/WritingJavaProgramsThatUseMathematica.html)
 - copy your JLink.jar to WebContent/WEB-INF/lib
+- at least on a Mac: make sure libJLinkNativeLibrary.jnilib is available (e.g. by copying it to /Library/Java/Extensions).
+  Use the system's Java Runtime Environment (1.5 on Mac OS X 10.5) in this case.
 - install Tomcat (>= 6), JavaServer Faces (>= 2)
-- run the server
+- run the server (in Eclipse: use the Servers tab)
+- access the site at e.g. http://localhost:8080/jsf-mathematica/faces/index.xhtml
